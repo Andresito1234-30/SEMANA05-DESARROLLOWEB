@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <header class="absolute inset-x-0 top-0 z-50">
+  <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="/images/insignia-colegio.png" alt="" class="h-8 w-auto" />
+      </a>
+    </div>
+
+    <!-- Menú principal para pantallas grandes -->
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="/tailwind/tailwind.html" class="text-sm/6 font-semibold text-white">INICIO</a>
+      <a href="/tailwind/docente.html" class="text-sm/6 font-semibold text-white">DOCENTES</a>
+      <a href="#" class="text-sm/6 font-semibold text-white">ESTUDIANTES</a>
+      <a href="/tailwind/administrativo.html" class="text-sm/6 font-semibold text-white">ADMINISTRACIÓN</a>
+    </div>
+
+    <!-- Botón menú móvil -->
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+        <span class="sr-only">Open main menu</span>
+        <!-- Icono hamburguesa -->
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil desplegable -->
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img src="/images/insignia-colegio.png" alt="" class="h-8 w-auto" />
+            </a>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+              <span class="sr-only">Close menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-white/10">
+              <div class="space-y-2 py-6">
+                <a href="/tailwind/tailwind.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">INICIO</a>
+                <a href="/tailwind/docente.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">DOCENTES</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">ESTUDIANTES</a>
+                <a href="/tailwind/docente.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">ADMINISTRACIÓN</a>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
+
+  <body>
+    <div class="bg-[url('/images/patio.jpg')] bg-cover bg-center">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 text-white p-10">
+            <div class="max-w-xl">
+            <h2 class="text-3xl font-semibold tracking-tight text-pretty text-white sm:text-4xl">Conoce nuestros Estudiantes</h2>
+            <p class="mt-6 text-lg/8 text-gray-400">En esta sección se presentan a los estudiantes de la Institución Educativa Privada Evariste Galois, quienes conforman la comunidad académica con mayor potencial de crecimiento y aprendizaje. Cada estudiante aporta su entusiasmo, creatividad y compromiso, participando activamente en las distintas actividades académicas, culturales y deportivas. Su desarrollo integral es nuestra prioridad, y buscamos fomentar habilidades, valores y competencias que les permitan enfrentar retos con responsabilidad, colaboración y excelencia.</p>
+            </div>
+            <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+            <li>
+                <div class="flex items-center gap-x-6">
+                <img src="/images/mi-foto.jpg" alt="" class="size-16 rounded-full outline-1 -outline-offset-1 outline-white/10" />
+                    <div>
+                        <h3 class="text-base/7 font-semibold tracking-tight text-white">André Huaroto</h3>
+                        <p class="text-sm/6 font-semibold text-indigo-400">Docente del área computación</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center gap-x-6">
+                <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-16 rounded-full outline-1 -outline-offset-1 outline-white/10" />
+                <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-white">Juanito Alimaña</h3>
+                    <p class="text-sm/6 font-semibold text-indigo-400">Docente del área de matemática</p>
+                </div>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center gap-x-6">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-16 rounded-full outline-1 -outline-offset-1 outline-white/10" />
+                <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-white">Dayanita Show</h3>
+                    <p class="text-sm/6 font-semibold text-indigo-400">Nutricionista de robots</p>
+                </div>
+                </div>
+            </li>
+            <li>
+                <div class="flex items-center gap-x-6">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-16 rounded-full outline-1 -outline-offset-1 outline-white/10" />
+                <div>
+                    <h3 class="text-base/7 font-semibold tracking-tight text-white">Courtney Henry</h3>
+                    <p class="text-sm/6 font-semibold text-indigo-400">Designer</p>
+                </div>
+                </div>
+            </li>
+            <li> 
+            </li>
+            </ul>
+        </div>
+    </div>
+    <footer class="bg-gray-900 py-24 sm:py-32">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+    <p class="text-gray-400">&copy; 2025 Institución Educativa Privada Evariste Galois. Todos los derechos reservados.</p>
+    <p class="text-gray-400 mt-2">Contacto: contacto@evaristegalois.edu.pe | Teléfono: 998655424</p>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <title>Portafolio - André Huaroto</title>
+    <!-- Enlace al archivo CSS para los estilos -->
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body>
+    <!-- Header con título y enlaces de navegación -->
+    <header class="header">
+   
+        <h1 class="header-title"><a href="portafolioScript.html" class="nav-link">Portafolio - André Huaroto</a></h1>
+    
+        
+        <!-- Menú de navegación principal -->
+        <nav class="nav-menu">
+            <a href="indexResponsive.html" class="nav-link">HTML</a>
+            <a href="CSS2.html" class="nav-link">CSS2</a>
+            <a href="CSS3.html" class="nav-link">CSS3</a>
+            <a href="/tailwind/tailwind.html" class="nav-link">TAILWIND</a>
+            <a href="#" class="nav-link">JAVASCRIPT</a>
+        </nav>
+        
+        <!-- Botón de menú hamburguesa para dispositivos móviles -->
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Contenedor principal con menú lateral y contenido -->
+    <div class="main-container">
+        <!-- Menú lateral izquierdo con desplegables -->
+        <aside class="sidebar">
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="showContent('about')">
+                    <strong>Sobre Mí</strong> 
+                </button>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="showContent('projects')">
+                    <strong>Proyectos</strong> 
+                </button>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="showContent('contact')">
+                    <strong>Contacto</strong> 
+                </button>
+            </div>
+        </aside>
+
+        <!-- Contenido principal del portafolio - Secciones que se mostrarán -->
+        <main class="content">
+            <!-- Sección de Bienvenida (contenido por defecto) -->
+            <section id="welcome" class="content-section active">
+                <h2><strong>¡Bienvenido a mi Portafolio!</strong></h2>
+                <p>Selecciona una categoría del menú lateral para ver más información.</p>
+                <div class="welcome-content">
+                    <img src="/images/welcome.jpg" alt="Imagen de bienvenida al portafolio profesional con elementos de diseño moderno">
+                    <p>Explora mis habilidades, proyectos anteriores y forma de contactarme.</p>
+                </div>
+            </section>
+
+            <!-- Sección Sobre Mí -->
+            <section id="about" class="content-section">
+                <h2><strong>Sobre André Huaroto</strong></h2>
+                <div class="about-content">
+                    <img src="/images/mi-foto.jpg" alt="Foto profesional de André Huaroto, hombre latinoamericano con expresión amigable">
+                    <div class="about-text">
+                        <h3>Estudiante de ingeniería de sistemas - IV CICLO</h3>
+                        <p>Estudiante de Ingeniería de Sistemas en la UNDC, con gran interés en el desarrollo web y las nuevas tecnologías. Me gusta aprender constantemente y aplicar mis conocimientos en proyectos que aporten valor e innovación.</p>
+                        <div class="skills">
+                            <h4>Habilidades:</h4>
+                            <ul>
+                                <li>HABILIDAD 1</li>
+                                <li>HABILIDAD 2</li>
+                                <li>HABILIDAD 3</li>
+                                <li>HABILIDAD 4</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Proyectos -->
+            <section id="projects" class="content-section">
+                <h2><strong>Mis Proyectos</strong></h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="/images/img-css2.png">
+                        <h3>Página Web con HTML y CSS</h3>
+                        <p>Una página implementando el lenguaje de marcado HTML y CSS para la estética.</p>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS</span> 
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="/images/img-css3.png" alt="Dashboard de aplicación meteorológica con gráficos y datos de ubicación">
+                        <h3>Página Web con HTML, CSS3 Y ANIMACIONES</h3>
+                        <p>Una página implementando el lenguaje de marcado HTML y CSS, en conjunto a ello utilizando maquetas de CSS para animaciones.</p>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">PLANTILLAS DE CSS</span>
+                    </div>
+                    
+                    <div class="project-card">
+                        <img src="/images/img-tailwind.png">
+                        <h3>Página Web con plantillas extraidas de Tailwind</h3>
+                        <p>Una página implementando conocimientos de HTML5 y CSS, en conjunto extrayendo plantillas de Tailwind</p>
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">TAILWIND</span> 
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Contacto -->
+            <section id="contact" class="content-section">
+                <h2><strong>Contacto</strong></h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <p><strong>Email:</strong> 2411010094@undc.edu.pe</p>
+                        <p><strong>Teléfono:</strong> 998655424</p>
+                        <p><strong>Ubicación:</strong> San Vicente de Cañete, Perú</p>
+                        
+                        <div class="social-links">
+                            <h4>Sígueme en:</h4>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/huaroto-yurihuaman-andre-leosan-27b915332?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Buyuc4KxSTO%2BNU3Y6HfAjWw%3D%3D" class="social-link">LinkedIn</a>
+                                <a href="https://github.com/Andresito1234-30" class="social-link">GitHub</a>
+                                 
+                            </div>
+                        </div>
+                    </div> 
+ 
+
+                    <div class="contact-form">
+                        <h3>Envíame un Mensaje</h3>
+                        <form id="contactForm">
+                            <input type="text" name="name" placeholder="Nombre" required>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+                            <button type="submit">Enviar Mensaje</button>
+                        </form>
+                        <p id="formMessage" style="display:none; color:green; margin-top:10px;"></p>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer con información de contacto -->
+    <footer class="footer">
+        <p>Correo: 2411010094@undc.edu.pe</p>
+        <p>Teléfono: 998655424</p>
+    </footer>
+
+    <!-- Enlace al archivo JavaScript para la funcionalidad -->
+    <script src="script.js"></script>
+</body>
+</html>
