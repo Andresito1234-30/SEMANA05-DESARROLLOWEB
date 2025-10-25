@@ -1,0 +1,402 @@
+/* Reset básico para eliminar márgenes y padding por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del header con título y navegación */
+.header {
+    background-color: #142a40;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Título principal en el header */
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Contenedor para el menú de navegación */
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Estilos de los enlaces de navegación */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #34495e;
+}
+
+/* Botón de menú hamburguesa (oculto por defecto en desktop) */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Contenedor principal con menú lateral y contenido */
+.main-container {
+    display: flex;
+    flex: 1;
+}
+
+/* Barra lateral con menús desplegables */
+.sidebar {
+    width: 250px;
+    background-color: #34495e;
+    color: white;
+    padding: 1rem;
+    min-height: calc(100vh - 120px);
+}
+
+/* Botones para los desplegables */
+.dropdown-btn {
+    width: 100%;
+    text-align: left;
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #1a252f;
+}
+
+/* Área de contenido principal */
+.content {
+    flex: 1;
+    padding: 2rem;
+    background-color: white;
+    position: relative;
+}
+
+/* Secciones de contenido (ocultas por defecto excepto welcome) */
+.content-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Animación para mostrar contenido */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos para la sección de bienvenida */
+.welcome-content {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.welcome-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Estilos para la sección Sobre Mí */
+.about-content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.about-content img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.skills {
+    margin-top: 1.5rem;
+}
+
+.skills ul {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.skills li {
+    background-color: #ecf0f1;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+/* Estilos para la sección Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    background-color: #3498db;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* Estilos para la sección Contacto */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 1.5rem;
+}
+
+.contact-info, .contact-form {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-form button {
+    background-color: #2c3e50;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #1a252f;
+}
+
+.social-links {
+    margin-top: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.social-link:hover {
+    background-color: #2980b9;
+}
+
+/* Footer con información de contacto */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+/* Media queries para responsividad */
+
+/* Tablets y dispositivos medianos */
+@media (max-width: 768px) {
+    /* Ocultar menú de navegación normal y mostrar botón hamburguesa */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #2c3e50;
+        width: 200px;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    /* Cambiar a diseño de columna en dispositivos móviles */
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .dropdown-btn {
+        width: auto;
+        min-width: 120px;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-content img {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 480px) {
+    .header {
+        padding: 0.75rem;
+    }
+    
+    .header-title {
+        font-size: 1.2rem;
+    }
+    
+    .content {
+        padding: 0.75rem;
+    }
+    
+    .sidebar {
+        padding: 0.5rem;
+    }
+    
+    .dropdown-btn {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .project-card {
+        padding: 1rem;
+    }
+    
+    .contact-info, .contact-form {
+        padding: 1rem;
+    }
+}

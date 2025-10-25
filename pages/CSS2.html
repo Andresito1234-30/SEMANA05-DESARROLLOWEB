@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Andre Huaroto</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+      color: #000;
+    }
+
+    /* Header */
+    header {
+      background: #0b33d9;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Secciones */
+    section {
+      padding: 40px 60px;
+    }
+
+    .card {
+      background: #e0e0e0;
+      border-radius: 15px;
+      padding: 10px 30px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .content {
+      background: #dcdcdc;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: justify;
+      line-height: 1.5em;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      background: #0b33d9;
+      height: 50px;
+      margin-top: 50px;
+      border-radius: 20px 20px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div>
+      <h1>Andre Huaroto</h1>
+      <p>estudiante@undc.edu.pe</p>
+    </div>
+    <nav>
+      <a href="indexResponsive.html" title="ENTRAR AL HTML">HTML</a>
+      <a href="#" title="CSS2">CSS2</a>
+      <a href="CSS3.html" title="CSS3">CSS3</a>
+      <a href="../pages/tailwind/tailwind.html" title="TAILWIND">TAILWIND</a>
+      <a href="portafolioScript.html" title="Portafolio">JAVASCRIPT</a>
+    </nav>
+  </header>
+
+  <!-- Secciones principales -->
+  <section>
+    <div class="flex-container">
+      <!-- Sobre mí -->
+      <div style="flex:1">
+        <div class="card">
+          <h2>SOBRE MÍ</h2>
+        </div>
+        <div class="content">
+          <p>¡Hola! Soy una persona apasionada por el aprendizaje constante, la creatividad y el trabajo bien hecho. 
+          A lo largo de mi trayectoria he desarrollado habilidades que combinan la técnica con la sensibilidad, lo cual me permite abordar cada proyecto con compromiso, atención al detalle y una mirada única.</p>
+          <p>Me considero alguien responsable, proactivo/a y siempre dispuesto/a a asumir nuevos retos. Disfruto colaborar con otros, compartir ideas y seguir creciendo tanto personal como profesionalmente.</p>
+          <p>Este portafolio refleja una parte de mi camino, mis intereses y el tipo de trabajo que me motiva. Gracias por tomarte el tiempo de conocerme un poco más.</p>
+        </div>
+      </div>
+
+      <!-- Proyectos -->
+      <div style="flex:1">
+        <div class="card">
+          <h2>PROYECTOS</h2>
+        </div>
+        <div class="content">
+          <p>En esta sección encontrarás una selección de proyectos que representan mi trayectoria, estilo de trabajo y evolución profesional. Cada uno de ellos fue una oportunidad para aplicar mis conocimientos, resolver desafíos reales y seguir aprendiendo en el proceso.</p>
+          <p>He incluido tanto trabajos individuales como colaborativos, destacando aquellos que mejor reflejan mis habilidades, mi compromiso con la calidad y mi forma de abordar cada etapa del desarrollo creativo o técnico.</p>
+          <p>Te invito a explorarlos con detenimiento. Cada proyecto tiene su historia, su objetivo y su aporte, y todos forman parte del camino que sigo construyendo día a día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <p><strong>CONTACTO:</strong> 2411010094@undc.edu.pe</p> 
+    </div>
+  </footer>
+</body>
+</html>
